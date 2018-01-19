@@ -1,0 +1,27 @@
+<?php 
+$collection=$block->_prepareLayout();
+$id = $collection->getId();
+$name = $collection->getName();
+$email = $collection->getEmail();
+$phoneNo = $collection->getPhoneNo();
+$message = $collection->getMessage();
+?>
+
+
+
+<html>
+<body>
+
+<form action="<?php echo $this->getUrl('mit/form/register');?>" method="post">
+
+Id: <input type="number" name="id" value="<?php echo $id;?>"><br>
+
+Name: <input type="text" name="name" value="<?php echo $name;?>"><br>
+E-mail: <input type="email" name="email" value="<?php echo $email; ?>"><br>
+Phone no: <input type="text" name="phone" value="<?php echo $phoneNo; ?>"><br>
+Message: <input type="text" name="message" value="<?php echo $message; ?>"><br>
+<input type="submit" value="Save">
+</form>
+
+</body>
+</html>
